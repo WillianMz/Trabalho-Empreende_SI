@@ -1,0 +1,40 @@
+object FormSobre: TFormSobre
+  Left = 0
+  Top = 0
+  Caption = 'Sobre o aplicativo'
+  ClientHeight = 480
+  ClientWidth = 360
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar_Titulo: TToolBar
+    Size.Width = 360.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claSteelblue
+    object btnMenu: TButton
+      Align = Left
+      IconTintColor = claWhite
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'replytoolbutton'
+      TabOrder = 0
+      Text = 'btnMenu'
+    end
+    object lblTitulo: TLabel
+      Align = Client
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 312.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = '</SI> AppEsucri'
+      TabOrder = 1
+    end
+  end
+end

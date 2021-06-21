@@ -1,0 +1,21 @@
+program AppEsucri;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  uFormPrincipal in 'uFormPrincipal.pas' {FormPrincipal},
+  uFormCadUsuario in 'uFormCadUsuario.pas' {FormCadUsuario},
+  Androidapi.JNI.Network in 'Androidapi.JNI.Network.pas',
+  uFormSobre in 'uFormSobre.pas' {FormSobre},
+  uFormCursoSI in 'uFormCursoSI.pas' {FormCursoSI};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.CreateForm(TFormCadUsuario, FormCadUsuario);
+  Application.CreateForm(TFormSobre, FormSobre);
+  Application.CreateForm(TFormCursoSI, FormCursoSI);
+  Application.Run;
+end.

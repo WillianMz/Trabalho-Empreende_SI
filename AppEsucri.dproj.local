@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/05/05 10:40:38.000.159,=C:\Users\WN\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/05/05 10:41:21.000.479,C:\Users\WN\Desktop\appSistemas\uFormPrincipal.fmx=C:\Users\WN\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2019/05/05 10:41:21.000.479,C:\Users\WN\Desktop\appSistemas\uFormPrincipal.pas=C:\Users\WN\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/05/05 10:41:43.000.419,C:\Users\WN\Desktop\appSistemas\AppEsucri.dproj=C:\Users\WN\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2019/05/05 10:43:04.000.548,=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/05/05 10:43:27.000.704,C:\Users\WN\Desktop\appSistemas\uFormCadUsuario.pas=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/05/05 10:43:27.000.704,C:\Users\WN\Desktop\appSistemas\uFormCadUsuario.fmx=C:\Users\WN\Desktop\appSistemas\Unit1.fmx</Transaction>
+    <Transaction>2019/05/05 13:40:53.000.775,=C:\Users\WN\Desktop\appSistemas\Androidapi.JNI.Network.pas</Transaction>
+    <Transaction>2019/05/05 16:30:09.000.824,=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/05/05 16:30:31.000.461,C:\Users\WN\Desktop\appSistemas\uFormSobre.fmx=C:\Users\WN\Desktop\appSistemas\Unit1.fmx</Transaction>
+    <Transaction>2019/05/05 16:30:31.000.461,C:\Users\WN\Desktop\appSistemas\uFormSobre.pas=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/05/05 17:18:03.000.960,=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/05/05 17:18:56.000.891,C:\Users\WN\Desktop\appSistemas\uFormCursoSI.fmx=C:\Users\WN\Desktop\appSistemas\Unit1.fmx</Transaction>
+    <Transaction>2019/05/05 17:18:56.000.891,C:\Users\WN\Desktop\appSistemas\uFormCursoSI.pas=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/05/30 19:44:36.000.916,=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/05/30 19:45:04.000.064,C:\Users\WN\Desktop\appSistemas\uFormNoticias.pas=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/05/30 19:45:04.000.064,C:\Users\WN\Desktop\appSistemas\uFormNoticias.fmx=C:\Users\WN\Desktop\appSistemas\Unit1.fmx</Transaction>
+    <Transaction>2019/06/09 09:45:55.000.749,=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/06/09 09:46:24.000.101,C:\Users\WN\Desktop\appSistemas\uFormSplash.pas=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/06/09 09:46:24.000.101,C:\Users\WN\Desktop\appSistemas\uFormSplash.fmx=C:\Users\WN\Desktop\appSistemas\Unit1.fmx</Transaction>
+    <Transaction>2019/06/10 00:54:05.000.859,=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/06/10 00:54:40.000.943,C:\Users\WN\Desktop\appSistemas\uFormNavegador.fmx=C:\Users\WN\Desktop\appSistemas\Unit1.fmx</Transaction>
+    <Transaction>2019/06/10 00:54:40.000.943,C:\Users\WN\Desktop\appSistemas\uFormNavegador.pas=C:\Users\WN\Desktop\appSistemas\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android="4203469ac4d67100"/>
+	</ActiveMobileDevice>
+</BorlandProject>

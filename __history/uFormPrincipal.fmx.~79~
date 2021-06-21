@@ -1,0 +1,125 @@
+object FormPrincipal: TFormPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 505
+  ClientWidth = 343
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar_Titulo: TToolBar
+    Size.Width = 343.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claSteelblue
+    object lblTitulo: TLabel
+      Align = Client
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 343.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = '</>Sistemas de Informa'#231#227'o'
+      TabOrder = 0
+    end
+  end
+  object lyt_Menu: TLayout
+    Align = Bottom
+    Position.Y = 441.000000000000000000
+    Size.Width = 343.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnVerNoticias: TButton
+      Align = Left
+      Position.X = 100.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Not'#237'cias'
+      OnClick = btnVerNoticiasClick
+    end
+    object btnUsuario: TButton
+      Align = Left
+      Position.X = 200.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Usu'#225'rio'
+      OnClick = btnUsuarioClick
+    end
+    object btnCurso: TButton
+      Align = Left
+      Size.Width = 100.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Curso'
+      OnClick = btnCursoClick
+    end
+    object btnSobre: TButton
+      Align = Right
+      Position.X = 295.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'detailstoolbutton'
+      TabOrder = 3
+      Text = 'btnSobre'
+      OnClick = btnSobreClick
+    end
+  end
+  object lblDesenvolvedor: TLabel
+    Align = Bottom
+    StyledSettings = [Family, Style, FontColor]
+    Position.Y = 482.000000000000000000
+    Size.Width = 343.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 10.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = '2019 '#169' EsucriApp'#8482
+    TabOrder = 4
+  end
+  object tcPrincipal: TTabControl
+    Align = Client
+    Size.Width = 343.000000000000000000
+    Size.Height = 393.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 5
+    TabPosition = None
+    Sizes = (
+      343s
+      393s)
+    object tabVideo: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Apresenta'#231#227'o'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object wbVideo: TWebBrowser
+        Touch.InteractiveGestures = [Rotate]
+        Align = Client
+        Size.Width = 343.000000000000000000
+        Size.Height = 393.000000000000000000
+        Size.PlatformDefault = False
+        URL = 'https://samemes.com.br/'
+      end
+    end
+  end
+end

@@ -1,0 +1,31 @@
+unit uFormCursoSI;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.TabControl;
+
+type
+  TFormCursoSI = class(TForm)
+    ToolBar_Titulo: TToolBar;
+    btnVoltar: TButton;
+    lblTitulo: TLabel;
+    TabControl_Curso: TTabControl;
+    TabItem1: TTabItem;
+    TabItem2: TTabItem;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormCursoSI: TFormCursoSI;
+
+implementation
+
+{$R *.fmx}
+
+end.

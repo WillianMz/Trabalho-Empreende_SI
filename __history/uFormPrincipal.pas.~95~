@@ -1,0 +1,199 @@
+unit uFormPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.MultiView,
+  FMX.StdCtrls, FMX.Controls.Presentation, FMX.ListBox, FMX.Edit,
+  FMX.Layouts, FMX.Objects, FMX.WebBrowser, FMX.TabControl, FMX.ListView.Types,
+  FMX.ListView.Appearances, FMX.ListView.Adapters.Base, IdBaseComponent,
+  IdComponent, IdTCPConnection, IdTCPClient, IdHTTP, FMX.ListView,System.JSON, IdSSLOpenSSL;
+
+type
+  TFormPrincipal = class(TForm)
+    ToolBar_Titulo: TToolBar;
+    lblTitulo: TLabel;
+    lyt_Menu: TLayout;
+    btnVerNoticias: TButton;
+    btnUsuario: TButton;
+    btnCurso: TButton;
+    lblDesenvolvedor: TLabel;
+    tcPrincipal: TTabControl;
+    tabVideo: TTabItem;
+    wbVideo: TWebBrowser;
+    btnSobre: TButton;
+    procedure btnVerNoticiasClick(Sender: TObject);
+    procedure btnCursoClick(Sender: TObject);
+    procedure btnUsuarioClick(Sender: TObject);
+    procedure btnSobreClick(Sender: TObject);
+  private
+    { Private declarations }
+    function retirarAspas(str: string) : string;
+    function GetURLasString(const aurl: string) : string;
+  public
+    { Public declarations }
+    procedure loadPrincipal;
+  end;
+
+var
+  FormPrincipal: TFormPrincipal;
+
+  myData : string;
+  jsv : TJsonValue;
+  originalObject : TJsonObject;
+  jsPair : TJsonPair;
+  jsArr : TJsonArray;
+  jso : TJsonObject;
+  i : integer;
+
+
+
+implementation
+
+{$R *.fmx}
+
+uses uFormCadUsuario, Androidapi.JNI.Network, uFormSobre, uFormCursoSI, uFormNoticias;
+
+
+procedure TFormPrincipal.btnCursoClick(Sender: TObject);
+begin
+  if IsConnected = False then
+    begin
+      ShowMessage('Ops.! Verifique sua conexão com a internet!');
+      Exit;
+    end
+  else
+      try
+        Application.CreateForm(TFormCursoSI, FormCursoSI);
+        FormCursoSI.Show;
+      finally
+        FreeAndNil(FormCursoSI);
+      end;
+end;
+
+procedure TFormPrincipal.btnSobreClick(Sender: TObject);
+begin
+  try
+    Application.CreateForm(TFormSobre, FormSobre);
+    FormSobre.Show;
+  finally
+    FreeAndNil(FormSobre);
+  end;
+end;
+
+procedure TFormPrincipal.btnUsuarioClick(Sender: TObject);
+begin
+  if IsConnected = False then
+    begin
+      ShowMessage('Ops.! Verifique sua conexão com a internet!');
+      Exit;
+    end
+  else
+    FormCadUsuario.Show;
+end;
+
+procedure TFormPrincipal.btnVerNoticiasClick(Sender: TObject);
+begin
+  if IsConnected = False then
+    begin
+      ShowMessage('Ops.! Verifique sua conexão com a internet!');
+      Exit;
+    end
+  else
+      try
+        Application.CreateForm(TformNoticias, formNoticias);
+        formNoticias.Show;
+      finally
+        FreeAndNil(formNoticias);
+      end;
+end;
+
+procedure TFormPrincipal.loadPrincipal;
+var
+  urlPrincipal : String;
+begin
+
+  try
+    myData := GetURLasString('http://esucriapp.servicos.ws/api/principal/principal.php');
+  except
+    on E:Exception do
+      ShowMessage('Erro 1: ' + e.Message);
+  end;
+
+  try
+    jsv := TJSONObject.ParseJSONValue(myData);
+
+    try
+      originalObject := jsv as TJSONObject;
+      jsPair := originalObject.Get('principal');
+
+      jsArr := jsPair.JsonValue as TJSONArray;
+
+      for i := 0 to jsArr.Size do
+        begin
+          jso := jsArr.Get(i) as TJSONObject;
+
+          for jsPair in jso do
+            begin
+              if jsPair.JsonString.Value = 'url' then
+                begin
+                 // formNoticias.lvNoticias.BeginUpdate;
+                  {LItem := formNoticias.lvNoticias.Items.Add;
+
+                  LItem.Text := retirarAspas(jso.GetValue('descricao').ToString);
+
+                  LItem.Detail := retirarAspas(jso.GetValue('url_noticia').ToString);
+
+                  //LItem.Detail := retirarAspas(jso.GetValue('data').ToString);
+
+                  LItem.IndexTitle := retirarAspas(jso.GetValue('titulo').ToString);
+
+                  formNoticias.lvNoticias.EndUpdate; }
+                  urlPrincipal := retirarAspas(jso.GetValue('url').ToString);
+                end;
+            end;
+        end;
+
+      wbVideo.URL := urlPrincipal;
+
+    finally
+     // jsv.Free();
+    end;
+
+  except
+    on E:Exception do
+      begin
+        //ShowMessage('Erro 2: '+e.Message);
+        Exit;
+      end;
+  end;
+
+
+
+end;
+
+function TformPrincipal.retirarAspas(str: string): string;
+var
+ tamanho : integer;
+begin
+  tamanho := Length(str);
+  str := copy(str, 2, tamanho - 2);
+  result := str;
+end;
+
+function GetURLasString(const aurl: string): string;
+var
+  iHTTP : TidHTTP;
+begin
+  iHTTP := TidHTTP.Create(nil);
+
+  try
+    iHTTP.IOHandler := TidSSLIOHandlerSocketOpenSSL.Create(iHTTP);
+    result := iHTTP.Get(aurl);
+  finally
+    iHTTP.Free;
+  end;
+end;
+
+end.

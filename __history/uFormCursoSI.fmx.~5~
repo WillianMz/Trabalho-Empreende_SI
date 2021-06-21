@@ -1,0 +1,79 @@
+object FormCursoSI: TFormCursoSI
+  Left = 0
+  Top = 0
+  Caption = 'Curso Sistemas de Informa'#231#227'o'
+  ClientHeight = 497
+  ClientWidth = 366
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar_Titulo: TToolBar
+    Size.Width = 366.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claSteelblue
+    object btnVoltar: TButton
+      Align = Left
+      IconTintColor = claWhite
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'replytoolbutton'
+      TabOrder = 0
+      Text = 'btnVoltar'
+    end
+    object lblTitulo: TLabel
+      Align = Client
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 318.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Sistemas de Informa'#231#227'o'
+      TabOrder = 1
+    end
+  end
+  object TabControl_Curso: TTabControl
+    Align = Client
+    Size.Width = 366.000000000000000000
+    Size.Height = 449.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 2
+    TabPosition = PlatformDefault
+    Sizes = (
+      366s
+      400s
+      366s
+      400s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 183.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Apresenta'#231#227'o'
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 183.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Matriz Curr'#237'cular'
+    end
+  end
+end
